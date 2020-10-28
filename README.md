@@ -2,7 +2,7 @@
 ***
 ## Durante a Faculdade
 Principais atividades em **Python** durante a faculdade de *Ciência da Computação*.
-Aluno|Professora|Periodo
+Aluno|Professora|Período
 --|--|--
 Pablo|Simone|2º
 ```
