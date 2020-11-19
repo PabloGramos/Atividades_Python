@@ -5,7 +5,7 @@ def abertura():
     -------------------Escolha a dificuldade----------------------
     """)
 
-n=7
+n=37
 i=0
 tentativas=0
 chute=0
@@ -23,20 +23,20 @@ elif nivel == 2:
     tentativas = 10
     i = tentativas
 elif nivel == 3:
-    print("Adivinhe o numero de 0 a 200")
+    print("Adivinhe o numero de 0 a 100")
     tentativas = 5
     i = tentativas
 else:
     print("Opção inválida!")
-    return
-for tentativas in range(1,i):
+    exit()
+for tentativas in range(1,i+1):
     print("Voce possui {} tentativas".format(i))
     number=int(input("Digite o valor...."))
     i -= 1
     if number == n:
         print("Voce acertou!")
         break
-    elif number > 10:
+    elif number > 100:
         print("Valor inválido!")
         break
     else:
