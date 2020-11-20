@@ -10,10 +10,10 @@ while(not acertou and not enforcou):
 
     posicao=0
     for letra in palavra_chave:
-        if chute == letra:
+        if chute.upper() == letra.upper():
             print("Encontrou a letra {} na posição {}".format(letra,posicao))
         posicao += 1
-        print("Jogando")
+    print("Jogando")
 
 
 print("Fim do jogo")
