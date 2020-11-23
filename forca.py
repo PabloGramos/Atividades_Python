@@ -9,20 +9,25 @@ erros=0
 letras_acertadas=['_','_','_','_','_','_']
 
 print(letras_acertadas)
-while(not acertou and not enforcou):
+while(not enforcou and not acertou):
     chute=input("Qual a letra? ")
-    if chute in palavra_chave:
+    if chute.upper() in palavra_chave:
         posicao=0
         for letra in palavra_chave:
             if chute.upper() == letra.upper():
-                print("Encontrou a letra {} na posição {}".format(letra,posicao))
-                letras_acertadas[posicao]=letra
-            posicao += 1
-        acertou = '_' not in letras_acertadas
-        enforcou = erros == 6
+                letras_acertadas[posicao] = letra
+            posicao = posicao + 1
     else:
         erros += 1
+
+    enforcou = erros == 6
+    acertou = '_' not in letras_acertadas
     print(letras_acertadas)
 
+if acertou:
+    print("\nVocê ganhou!")
+else:
+    print("Você perdeu!")
 
 print("Fim do jogo")
+
