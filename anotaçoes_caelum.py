@@ -20,17 +20,18 @@ print(pessoa.keys())
 print(pessoa.values())
 
 
-lista=[12,	-2,	4,	8,	29,	45,	78,	36,	-17,	2,	12,	8,	3,	3,	-52]
+lista=[12,-2,4,8,29,45,78,36,-17,2,12,8,3,3,-52]
 
 print(max(lista),'minimo')
 print(min(lista),'maximo')
 # entender ocorrencia
-n=0
-media=0
-i=0
+n = 0
+media = 0
+i = 0
+
 while i <= len(lista):
-    print(lista[i])
-    n = n + lista[i]
+    n = lista[i]
+    print(n)
+    media  = media + n
     i += 1
-media = n / len(lista)
-print('a media da lista é ',media)
+print('a media da lista é ',media/i)
