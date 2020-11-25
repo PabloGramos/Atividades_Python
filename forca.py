@@ -34,6 +34,19 @@ print("""
 -------------------Jogo da Forca-----------------
 
 """)
+
+arquivo= open('palavras.txt','r')
+lista=[]
+
+
+import random
+for linha in arquivo:
+    lista.append(linha)
+
+    print(random.randrange(0,9))
+    print(linha)
+
+arquivo.close()
 palavra_chave='BANANA'
 jogar(palavra_chave)
 
