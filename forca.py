@@ -1,12 +1,37 @@
+import random
+
+
+def imprime_msg():
+    print("""
+    *************************************************
+    -------------------Jogo da Forca-----------------
+    *************************************************
+    """)
+
+def carrega_palavra():
+    palavra_chave = ''
+    arquivo = open('palavras.txt', 'r')
+    lista = []
+    for linha in arquivo:
+        lista.append(linha)
+    arquivo.close()
+    numero = random.randrange(0, len(lista))
+    palavra_chave = lista[numero].upper()
+    return palavra_chave
+
+
 def jogar(chave):
+    imprime_msg()
+
     acertou = False
     enforcou = False
     erros = 0
-    letras_acertadas = ['_', '_', '_', '_', '_', '_']
 
+    letras_acertadas = ['_' for letra in palavra_chave]
     print(letras_acertadas)
     while (not enforcou and not acertou):
         chute = input("Qual a letra? ")
+        chute = chute.strip().upper()
         if chute.upper() in chave:
             posicao = 0
             for letra in palavra_chave:
@@ -29,24 +54,7 @@ def jogar(chave):
 
 
 
-
-print("""
--------------------Jogo da Forca-----------------
-
-""")
-
-arquivo= open('palavras.txt','r')
-lista=[]
-
-
-import random
-for linha in arquivo:
-    lista.append(linha)
-
-    print(random.randrange(0,9))
-    print(linha)
-
-arquivo.close()
-palavra_chave='BANANA'
+# CORPO PRINCIPAL
+palavra_chave = carrega_palavra()
 jogar(palavra_chave)
 
