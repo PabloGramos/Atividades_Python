@@ -15,30 +15,44 @@ def carrega_palavra():
     for linha in arquivo:
         lista.append(linha)
     arquivo.close()
+    print(lista)
     numero = random.randrange(0, len(lista))
     palavra_chave = lista[numero].upper()
     return palavra_chave
 
 def vencedor():
-    print("""
-    
-    
-    """)
+    print('Parabéns, você ganhou!')
+    print("				___________					")
+    print("            '._==_==_=_.'				")
+    print("		       .-\\:       /-.				")
+    print("           |  (|:.     |)  |				")
+    print("             '-|:.     |-'               ")
+    print("               \\::.    /				")
+    print("                '::.	.'					")
+    print("                  ) (					")
+    print("                _.' '._					")
+    print("               '-------'					")
 
 def perdedor(palavra):
     print(f"""
     Puxa,	você	foi	enforcado!
     A	palavra	era	{palavra}'
         __________________
-       /
-      /
-    //
-    \|     XXXX
-     |     XXXX
-     |     XXX
-     |
-     \__
-       |
+       /                    \.
+      /                      \.
+    //                        \/\.
+    \|     XXXX      XXXX     | /
+     |     XXXX      XXXX     |/
+     |     XXX        XXX     |
+     |                        |
+     \__        XXX         __/
+       |\       XXX        /|
+       | |                | |
+       |  IIIIIIIIIIIIIIII  |
+       |    IIIIIIIIIIII    |
+       \_                  _/
+         \_              _/
+           \____________/
     """)
 
 

@@ -1,7 +1,9 @@
-banana
-melancia
-morango
-manga
-melao
+avestruz
+abelha
 uva
-abacaxi
+cachorro
+aviao
+gato
+sapo
+faca
+sapato
