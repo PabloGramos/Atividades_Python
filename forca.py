@@ -19,6 +19,28 @@ def carrega_palavra():
     palavra_chave = lista[numero].upper()
     return palavra_chave
 
+def vencedor():
+    print("""
+    
+    
+    """)
+
+def perdedor(palavra):
+    print(f"""
+    Puxa,	você	foi	enforcado!
+    A	palavra	era	{palavra}'
+        __________________
+       /
+      /
+    //
+    \|     XXXX
+     |     XXXX
+     |     XXX
+     |
+     \__
+       |
+    """)
+
 
 def jogar(chave):
     imprime_msg()
@@ -46,9 +68,9 @@ def jogar(chave):
         print(letras_acertadas)
 
     if acertou:
-        print("\nVocê ganhou!")
+        vencedor()
     else:
-        print("Você perdeu!")
+        perdedor(palavra_chave)
 
     print("Fim do jogo")
 
