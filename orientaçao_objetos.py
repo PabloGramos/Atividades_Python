@@ -22,6 +22,7 @@ def extrato(conta):
 conta1 = cria_conta('123-4',"Joao",120.0,1000.0)
 conta2 = cria_conta('123-5',"Jose",200.0,1000.0)
 
+
 print(conta1['numero'])
 deposita(conta1,300.0)
 saca(conta1,100.0)
