@@ -16,6 +16,11 @@ class Conta:
     def extrato(self):
         print("Numero: {}\nExtrato: {}".format(self.numero,self.saldo))
 
+    def transfere(self, destino, valor):
+        self.saldo -= valor
+        destino.saldo += valor
+
+
 conta = Conta('123-4','João',120.0,1000.0)
 print("{}\n{}\n{}\n{}".format(conta.numero,conta.titular,conta.saldo,conta.limite))
 conta.deposita(20.0)
