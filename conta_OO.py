@@ -50,7 +50,12 @@ class Conta:
             return True
 
 cliente = Cliente('Joao', 'Oliveira', '1111111111-1')
-minha_conta = Conta('123-4', cliente, 120.0, 1000.0)
+minha_conta = Conta('123-4', cliente, 1000.0)
+novo_saldo = -200
+if(novo_saldo < 0):
+    print("Saldo inválido")
+else:
+    minha_conta.saldo = novo_saldo
 conta = Conta('123-4','João',120.0)
 print("{}\n{}\n{}\n{}".format(conta.numero,conta.titular,conta.saldo,conta.limite))
 conta.deposita(20.0)
