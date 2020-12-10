@@ -49,6 +49,9 @@ class Conta:
             self.historico.transacoes.append("transferencia de {} para conta {}".format(valor, destino.numero))
             return True
 
+    def pega_saldo(self):
+        return self.saldo
+
 cliente = Cliente('Joao', 'Oliveira', '1111111111-1')
 minha_conta = Conta('123-4', cliente, 1000.0)
 novo_saldo = -200
@@ -59,7 +62,8 @@ else:
 conta = Conta('123-4','João',120.0)
 print("{}\n{}\n{}\n{}".format(conta.numero,conta.titular,conta.saldo,conta.limite))
 conta.deposita(20.0)
-print("Novo saldo apos deposito: ",conta.saldo)
+
+print("Novo saldo apos deposito: ",conta.saldo,' ',minha_conta.pega_saldo())
 conta.saca(150.0)
 print("Novo saldo apos saque: ",conta.saldo)
 conta.extrato()
