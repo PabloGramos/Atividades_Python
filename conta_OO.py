@@ -18,12 +18,14 @@ class Cliente:
 
 class Conta:
     _total_contas = 0
+    __slots__ = ['_numero','_titular','_saldo','_limite']
+    
     def __init__(self,numero,titular,saldo=0.0,limite=1000.0):
         print('Iniciando a conta')
-        self.numero=numero
-        self.titular=titular
+        self._numero=numero
+        self._titular=titular
         self._saldo = saldo
-        self.limite=limite
+        self._limite=limite
         self.historico = Historico()
         Conta._total_contas += 1
 
@@ -64,7 +66,7 @@ class Conta:
         return self.saldo
 
 cliente = Cliente('Joao', 'Oliveira', '1111111111-1')
-minha_conta = Conta('123-4', cliente, 1000.0)
+minha_conta = Conta(cliente, 1000.0)
 novo_saldo = -200
 if(novo_saldo < 0):
     print("Saldo inválido")
@@ -75,7 +77,6 @@ conta2 = Conta('123-5','samuel',200.0)
 print(conta._total_contas,' --- ',conta2._total_contas)
 print("{}\n{}\n{}\n{}".format(conta.numero,conta.titular,conta.saldo,conta.limite))
 conta.deposita(20.0)
-
 print("Novo saldo apos deposito: ",conta.saldo,' ',minha_conta.pega_saldo())
 conta.saca(100.0)
 print("Novo saldo apos saque: ",conta.saldo)
