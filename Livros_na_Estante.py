@@ -1,4 +1,4 @@
-def estante():
+def Estante():
     fila = [[],[],[],[]]
     l = 0
     while(True):
@@ -55,4 +55,4 @@ def estante():
             print("\nOpção Inválida!\n")
 
 print("___________LIVROS__NA__ESTANTE__________")
-estante()
+Estante()
